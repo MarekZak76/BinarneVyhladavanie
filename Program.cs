@@ -39,6 +39,9 @@ namespace BinarySearch
             if (inputArray == null)
                 throw new ArgumentNullException();
             
+            if (low < inputArray.GetLowerBound(0) || high > inputArray.GetUpperBound(0))
+                throw new ArgumentOutOfRangeException();
+            
             int mid = low + (high - low) / 2;
 
             if (low <= high)
