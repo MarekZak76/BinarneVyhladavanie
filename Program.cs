@@ -9,7 +9,7 @@ namespace BinarySearch
             int[] array = LoadData();
 
             Console.WriteLine(BinarySearchIterative(array, 123));
-            Console.WriteLine(BinarySearchRecursive(array, 123, 0, array.Length));
+            Console.WriteLine(BinarySearchRecursive(array, 123, 0, array.Length - 1));
         }
 
         private static int BinarySearchIterative(int[] inputArray, int item)
@@ -55,6 +55,7 @@ namespace BinarySearch
             }
             return -1;
         }
+        
         private static int[] LoadData()
         {
             return new int[] { 1, 5, 7, 14, 21, 32, 47, 69, 83, 91, 107, 123, 256, 300, 455 };
