@@ -14,6 +14,9 @@ namespace BinarySearch
 
         private static int BinarySearchIterative(int[] inputArray, int item)
         {
+            if (inputArray == null)
+                throw new ArgumentNullException();
+            
             int low = 0;
             int high = inputArray.Length - 1;
             int mid = low + (high - low) / 2;
@@ -33,6 +36,9 @@ namespace BinarySearch
 
         private static int BinarySearchRecursive(int[] inputArray, int item, int low, int high)
         {
+            if (inputArray == null)
+                throw new ArgumentNullException();
+            
             int mid = low + (high - low) / 2;
 
             if (low <= high)
